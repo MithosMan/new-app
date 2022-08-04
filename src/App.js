@@ -14,7 +14,7 @@ function App() {
     <Provider>
     <Navegacion />
     <Routes>
-      <Route path="/" element={"AAA"}/>
+      <Route path="/" element={<ListContainer/>}/>
       <Route path="/categoria/:idPagina" element={<ListContainer/>}/>
       <Route path="/Detalle/:idDetalle" element={<ItemDetailContainer/>}/>
       <Route path="/Cart" element={<Cart/>}/>

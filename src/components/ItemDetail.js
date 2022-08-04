@@ -7,16 +7,16 @@ const ItemDetail = ({data}) => {
 
   const [cart, setCart] = useState(false);
 
-  const { ponerCarrito } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const carrito = (valor) => {
     setCart(valor)
-    ponerCarrito(data, valor);
+    addToCart(data.id, valor)
   }
 
   return (
     <div>
-      <img src={data.imagen}></img>
+      <img src={data.imagen} alt={data.titulo}></img>
       <h2>{data.titulo}</h2>
       <p>Precio: ${data.obolos}</p>
       <p> (Hay {data.stock} disponibles)</p>
