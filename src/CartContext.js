@@ -33,6 +33,8 @@ export const Provider = (props) => {
         }
     }
 
+    const totalProducts = () => {return cart.reduce((acumulador, productoActual)=>acumulador+productoActual.cantidad, 0)};
+
     const isInCart = (id) => {
         return cart.some((item) => item.id === id);
     };
@@ -47,7 +49,7 @@ export const Provider = (props) => {
     }
 
     return (
-         <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, suma }}>
+         <CartContext.Provider value={{ cart, addToCart, deleteAll, deleteOne, suma, totalCart, totalProducts }}>
             {props.children}
         </CartContext.Provider>
     )

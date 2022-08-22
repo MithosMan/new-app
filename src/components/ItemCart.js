@@ -3,7 +3,7 @@ import { CartContext } from '../CartContext'
 
 const ItemCart = ({producto}) => {
 
-const {cart, deleteAll, deleteOne, suma} = useContext(CartContext)
+const {deleteOne} = useContext(CartContext)
 
 
 

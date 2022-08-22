@@ -10,8 +10,8 @@ const ItemDetail = ({data}) => {
   const { addToCart } = useContext(CartContext);
 
   const carrito = (valor) => {
-    setCart(valor)
-    addToCart(data.id, valor)
+    setCart(true)
+    addToCart(data, valor)
   }
 
   return (
